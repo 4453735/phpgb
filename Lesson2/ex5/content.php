@@ -1,0 +1,2 @@
+<h1>Название сайта</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam autem excepturi mollitia numquam officia porro similique, voluptas. Ad alias consectetur eaque et iste natus neque, officia provident ratione sed sit.</p>
