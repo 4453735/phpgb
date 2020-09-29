@@ -4,15 +4,18 @@
 
 // Рекурсия
 function numToPower($n, $pow) {
-    if ($n == 0) {
-        return 0;
-    } else if ($pow == 0) {
-        return 1;
+    if ($pow == 1) {
+        return $n;
     } else if ($pow < 0) {
+        // Проверка
+        // echo "n = {$n}, pow = {$pow} <br>";
         return numToPower(1 / $n, -$pow);
     } else {
+        // Проверка
+        // echo "n = {$n}, pow = {$pow} <br>";
         return $n * numToPower($n, $pow - 1);
+
     }
 }
 
-echo numToPower(3, -5);
+echo numToPower(2, 25);

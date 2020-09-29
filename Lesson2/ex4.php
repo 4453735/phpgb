@@ -4,25 +4,8 @@
 // В зависимости от переданного значения операции выполнить одну из арифметических операций
 // (использовать функции из пункта 3) и вернуть полученное значение (использовать switch).
 
-function sum($x, $y) {
-    return $x + $y;
-}
-
-function difference($x, $y) {
-    return $x - $y;
-}
-
-function multiplication($x, $y) {
-    return $x * $y;
-}
-
-function division($x, $y) {
-    if ($y != 0) {
-        return $x / $y;
-    } else {
-        echo "На ноль делить нельзя";
-    }
-}
+// Подключаем файл с функциями из предыдущего задания
+include 'ex3.php';
 
 function mathOperation($x, $y, $operation) {
     switch ($operation) {
@@ -34,8 +17,12 @@ function mathOperation($x, $y, $operation) {
             return multiplication($x, $y);
         case "division":
             return division($x, $y);
+        default:
+            return "Ошибка!";
     }
 }
+
+// вывод дублируется, т.к. в подключенном файле есть команды на вывод echo
 
 echo mathOperation(5, 2, "sum");
 echo mathOperation(5, 2, "difference");

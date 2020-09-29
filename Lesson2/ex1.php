@@ -9,12 +9,23 @@ $a = rand(-10, 10);
 $b = rand(-10, 10);
 
 if ($a >= 0 && $b >= 0) {
-    $difference = $a - $b;
-    echo "$a - $b = $difference";
+    echo "{$a} - {$b} = " . ($a - $b);
 } elseif ($a <= 0 && $b <= 0) {
-    $multiplication = $a * $b;
-    echo "$a * $b = $multiplication";
+    echo "{$a} * {$b} = " . ($a * $b);
 } else {
-    $sum = $a + $b;
-    echo "$a + $b = $sum";
+    echo "{$a} + {$b} = " . ($a + $b);
 }
+
+// Вариант решения через функцию
+
+function operationNum($a = 0, $b = 0) {
+    if ($a >= 0 && $b >= 0) {
+        return "{$a} - {$b} = " . ($a - $b);
+    } elseif ($a <= 0 && $b <= 0) {
+        return "{$a} * {$b} = " . ($a * $b);
+    } else {
+        return "{$a} + {$b} = " . ($a + $b);
+    }
+}
+
+echo "<br>" . operationNum($a, $b);
